@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18 mars 2014, 16:12:03
+    Author     : INF-PORT-CR2
+*/
+
+html{
+    height: 100%;   
+}
+
+body{
+    margin:0; 
+    padding:0; 
+    min-height:100%;
+}
+
+#left{
+    width: 50%; 
+    min-height:100%; 
+    background-color:wheat; 
+    border:none; 
+    margin:0; 
+    padding:0; 
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#right{
+    width: 50%; 
+    min-height:100%; 
+    background-color:peru; 
+    border:none; 
+    margin:0; 
+    padding:0; 
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+#center{
+    position:relative;
+    width:30%;
+    height:200px;
+    margin:auto;
+    top:200px;
+    background-color:whitesmoke;
+    border-radius:5px;
+}

@@ -1,0 +1,810 @@
+body
+{
+    background-color:#eeeeee;
+}
+#tableau_01
+{
+    background-color:#ffffff;
+    color:#000000;
+    font-family:"Arial";
+    width:900px;
+    box-shadow:2px 3px 2px #000000;
+}
+#tableau_02
+{
+    width:900px;
+    height:40px;
+}
+/* Premier Menu -----------------------------------------*/
+#menu_01
+{
+     background-color:#743411;
+     height:100px;
+     vertical-align:top;
+}
+.image_compte_panier
+{
+    padding-top:15px;
+    padding-right:5px;
+    text-align:center;
+    vertical-align:top;
+}
+#logo
+{
+   text-align:left;
+   padding-top:3px;
+   padding-left:30px;
+}
+.item_compte_panier
+{
+   background-color:#743411;
+   height:40px;
+   width:150px;
+   border-left-style:solid;
+   border-left-width:1px;
+   border-left-color:#b88f2c;
+   padding-right:10px;
+   vertical-align:top;
+   padding-top:10px;
+   color:#ffffff;
+   text-decoration:none;
+   font-family:"Arial";
+   font-weight:bold;
+   font-size:15px;
+   text-align:left;
+}
+.conteneur_01
+{
+   color:#ffffff;
+   text-decoration:none;
+   font-family:"Arial";
+   font-weight:bold;
+   font-size:15px;
+   text-align:left;
+   padding-top:5px;
+   width:auto;
+}
+#myAccount{    
+   color:#ffffff;
+   text-decoration:none;
+   font-family:"Arial";
+   font-weight:bold;
+   font-size:15px;
+   text-align:left;
+   padding-top:5px;    
+}
+.title_compte
+{
+   padding-right:10px;
+   padding-left:10px;    
+}
+#compte
+{
+   background-color:#ffd87b;
+   border:none;
+   width:auto;
+   height:auto;
+   color:#743411;
+   font-family:"Arial";
+   font-size:15px;
+   font-weight:bold;
+   padding-left:10px;
+   padding-right:10px;
+   padding-top:5px;
+   position:absolute;
+   border-radius:0 15px 15px 15px;
+   z-index:3;
+   box-shadow:2px 3px 2px #000000;
+   display:none;
+}
+#txtbox_identifiant
+{
+    border-radius:5px 5px 5px 5px;
+    width:150px;   
+}
+#txtbox_mdp
+{
+    border-radius:5px 5px 5px 5px;
+    width:150px;     
+}
+.button_connexion
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+}
+.error{
+   color:red;
+   font-family:"Arial";
+   font-weight:bold;
+   font-size:15px;
+   text-align:left;
+   text-align:center;
+}
+.button_deconnexion
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    margin-bottom:5px;
+    margin-top:5px;
+    margin-left:10px;
+    background-color:#b88f2c;
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+}
+.interligne_02
+{
+    height:5px;
+}
+.conteneur_01:hover
+{
+    background-color:#ffd87b;
+    color:#743411;
+    border-radius:5px 5px 0 0;
+}
+.conteneur_panier_01
+{
+   text-align:left;
+   color:#ffffff;
+   text-decoration:none;
+   font-family:"Arial";
+   font-weight:bold;
+   font-size:15px;
+   padding-top:5px;
+}
+.conteneur_panier_01 a
+{
+   color:#ffffff;
+   text-decoration:none;
+   font-family:"Arial";
+   font-weight:bold;
+   font-size:15px;    
+}
+.conteneur_panier_01:hover
+{
+   background-color:#ffd87b;
+   color:#743411;
+   border-radius:5px 5px 0 0;
+}
+.conteneur_panier_01:hover a
+{
+   color:#743411;
+}
+.conteneur_panier_01 a:hover
+{
+   text-decoration:underline;
+}
+#myPanier
+{
+   background-color:#ffd87b;
+   border:none;
+   width:200px;
+   height:auto;
+   color:#743411;
+   font-family:"Arial";
+   font-size:15px;
+   font-weight:bold;
+   padding-left:10px;
+   padding-right:10px;
+   padding-top:5px;
+   position:absolute;
+   border-radius:0 15px 15px 15px;
+   z-index:3;
+   box-shadow:2px 3px 2px #000000;
+   display:none;
+}
+/* Fin Premier Menu --------------------------------------*/
+/* Menu Déroulant ----------------------------------------*/
+#menu_02
+{
+    background-color:#743411;
+    height:43px;
+    padding-left:5px;
+    padding-right:5px;
+    position:absolute;
+    vertical-align:bottom;
+    z-index:2;
+}
+.menu_deroulant
+{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:11px;
+    color:#ffffff;
+    border:0;   
+}
+.menu_deroulant .disable_shadow{
+    background-color:#743411;
+    padding-right:5px;
+    padding-left:5px;
+    width:0px;
+    box-shadow:none;
+}
+.menu_deroulant .disable_shadow:hover{
+    text-decoration:none;
+    background-color:#743411;
+    border-radius:0 0 0 0;
+    box-shadow:none;    
+}
+.menu_deroulant li
+{    
+    height:28px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:2px;
+    padding-top:13px;
+    float: left;
+    width:100px;
+    background-color:#b88f2c;
+    border-radius: 15px 15px 0 0;
+    border-bottom:0;
+    border-top:0;
+}
+.menu_deroulant li a
+{
+    text-decoration:none;
+    color:#ffffff;
+}
+.menu_deroulant li:hover
+{
+    height:28px;
+    text-decoration:none;
+    background-color:#ffd87b;
+    border-radius:15px 15px 15px 15px;
+    box-shadow:2px 3px 2px #000000;
+}
+.menu_deroulant li:hover a
+{
+    color:#743411;
+}
+.menu_deroulant .deux_lignes{
+    height:28px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:10px;
+    padding-top:5px;
+    float: left;
+    width:100px;
+    background-color:#b88f2c;
+    border-radius: 15px 15px 0 0;
+    border-bottom:0;
+    border-top:0;
+}
+.menu_deroulant .deux_lignes a{
+    text-decoration:none;
+    color:#ffffff;
+}
+.menu_deroulant .deux_lignes:hover
+{
+    height:28px;
+    text-decoration:none;
+    background-color:#ffd87b;
+    border-radius:15px 15px 15px 15px;
+    box-shadow:2px 3px 2px #000000;
+}
+.menu_deroulant .deux_lignes:hover a
+{
+    color:#743411;
+}
+/* Fin Menu Déroulant --------------------------------------*/
+/* Début contenu Accueil -----------------------------------*/
+.contenu
+{
+    z-index:1;    
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:left;
+    font-size:12px;
+    color:#743411;
+    background-color:#ffffff;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.contenu_lien
+{
+    text-decoration:none;
+    color:#743411;
+}
+.contenu_lien:hover
+{
+    text-decoration:underline;
+}
+.slide
+{
+    width:900px;
+    text-align:center;    
+}
+.slide img
+{
+    text-align:center;    
+}
+/* Fin contenu Accueil -------------------------------------*/
+/* Début contenu Produits ----------------------------------*/
+.titre_contenu_page
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:left;
+    font-size:16px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+}
+.header_text
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:16px;
+    color:#ffffff;
+    background-color:#743411;
+    padding-left:10px;
+    padding-right:10px;    
+}
+.cell_text
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:14px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.button_ajouter
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+}
+.hidden_txtbox_id_produit
+{
+    display:none;    
+}
+.qte_produit
+{
+    width:25px;
+    text-align:center;
+}
+.erreur_quantite
+{
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:normal;
+    color:red;    
+}
+.indispo_produit
+{
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+    color:red; 
+}
+.dispo_produit
+{
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+    color:green; 
+}
+/* Fin contenu Produits ------------------------------------*/
+/* Début contenu Sandwichs Perso ---------------------------*/
+#tableau_ingredient
+{
+    width:900px;
+    text-align:center;
+}
+.title_step
+{
+    font-family:"Arial";
+    font-size:14px;
+    font-weight:bold; 
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+    color:#000000;
+}
+.title_step_opt
+{
+    font-weight:normal;
+    font-size:12px;
+}
+.title_step_ital
+{
+    font-weight:normal;
+    font-style:italic;
+    font-size:12px;
+}
+.title_ingredient
+{
+    font-family:"Arial";
+    font-size:14px;
+    font-weight:bold; 
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+    color:#000000;    
+}
+.ingredient
+{
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:normal; 
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+    color:#000000;  
+    vertical-align:top;
+}
+#tableau_pain
+{
+    width:850px;
+    text-align:center;
+}
+#tableau_poisson{
+    width:425px;
+    text-align:center;
+    display:none;
+}
+#tableau_charcuterie{
+    width:425px;
+    text-align:center;
+    display:none;
+}
+#tableau_legume
+{
+    width:850px;
+    text-align:center;
+}
+#tableau_sauce
+{
+    width:850px;
+    text-align:center;
+}
+#tableau_fromage
+{
+    width:850px;
+    text-align:center;
+}
+.tableau_ingredient_header
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:12px;
+    color:#ffffff;
+    background-color:#743411;
+    padding-left:10px;
+    padding-right:10px;    
+}
+.tableau_ingredient_cell
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:12px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.indispo_ingredient
+{
+    color:red;
+}
+.dispo_ingredient
+{
+    color:green; 
+}
+.qte_ingredient
+{
+    width:25px;
+    text-align:center;
+}
+/* Fin contenu Sandwichs Perso -----------------------------*/
+/* Début contenu Salades Perso -----------------------------*/
+#tableau_salade
+{
+    width:850px;
+    text-align:center;
+}
+#tableau_fruit
+{
+    width:850px;
+    text-align:center;
+}
+#tableau_extra
+{
+    width:850px;
+    text-align:center;
+}
+/* Fin contenu Salades Perso -------------------------------*/
+/* Début contenu ConsultPanier -----------------------------*/
+#tableau_panier
+{
+    width:880px;
+}
+.error_panier_vide
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:12px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;  
+}
+.list_ingr
+{
+    padding-bottom:10px;   
+}
+.cell_text_top
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:14px;
+    color:#000000;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    vertical-align:top;
+    border-bottom:1px solid #743411;
+}
+.cell_text_top_bgc
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:14px;
+    color:#000000;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    vertical-align:top;
+    border-bottom:1px solid #743411;
+    background-color:#b88f2c;
+}
+.cell_img
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:14px;
+    color:#000000;
+    padding-top:5px;
+    padding-bottom:5px;
+    vertical-align:top;
+    border-bottom:1px solid #743411;
+}
+.total_panier
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:18px;
+    color:#ffffff;
+    background-color:#743411;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;        
+}
+.total_prix_panier
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:18px;
+    color:#000000;
+    background-color:#ffffff;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;     
+    border-bottom:1px solid #743411;  
+    border-right:1px solid #743411;   
+}
+.tableau_ingr
+{    
+    border-left:2px solid #743411;
+    width:370px;
+    padding-top:5px;
+    background-color:#eeeeee;
+}
+.list_ingr_cell
+{
+    font-family:"Arial";
+    font-weight:normal;
+    font-size:12px;
+    vertical-align:top;
+    text-align:center;
+}
+.list_ingr_cell_lib
+{
+    font-family:"Arial";
+    font-weight:normal;
+    font-size:12px;
+    vertical-align:top;
+    text-align:left;
+    width:220px;
+}
+.button_moins
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    font-size:12px;
+    text-align:center;
+    font-weight:normal;
+}
+.button_plus
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    text-align:center;
+    font-size:12px;
+    font-weight:normal;
+}
+.button_supp
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+}
+.button_valider_commande
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    text-align:right;
+    font-size:12px;
+    padding-right:10px;
+    font-weight:bold;
+}
+.commande_valide
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:12px;
+    color:green;
+    padding-left:10px;
+    padding-right:10px;     
+}
+/* Fin contenu ConsultPanier -------------------------------*/
+/* Début contenu Mes Commandes -----------------------------*/
+#tableau_commande
+{
+    width:880px;
+}
+.error_list_commandes_vide
+{
+    font-family:"Arial";
+    font-weight:bold;
+    text-align:center;
+    font-size:12px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;  
+}
+#tableau_mes_commandes
+{
+    width:880px;    
+}
+#tableau_mes_commandes .cell_text
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:14px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border:1px solid #743411;
+}
+#tableau_mes_commandes .cell_text_sans_bord
+{
+    font-family:"Arial";
+    font-weight:normal;
+    text-align:center;
+    font-size:14px;
+    color:#000000;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-bottom:none;
+    border-left:1px solid #743411;
+    border-top:none;
+    border-right:none;
+}
+.header_sans_bord
+{
+    border-bottom:none;
+    border-left:1px solid #743411;
+    border-top:none;
+    border-right:none;
+}
+.button_commande
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+}
+.button_retour_commande
+{
+    border-radius:5px 5px 5px 5px;
+    color:#ffffff;
+    background-color:#743411;
+    font-family:"Arial";
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    margin-left:10px;
+}
+/* Fin contenu Mes Commandes -------------------------------*/
+.lbl_padding
+{
+    padding-right:10px;    
+}
+.button_on_right
+{
+    padding-right:10px;
+    text-align:right;
+}
+.button_on_left
+{
+    padding-left:10px;
+    padding-right:10px;
+    text-align:left;
+}
+.button_padding
+{
+    text-align:center;    
+}
+.interligne_01
+{
+    height:45px;
+    z-index:1;
+}
+img
+{
+    border:0;    
+}
+.interligne_02{
+    height:10px;    
+}

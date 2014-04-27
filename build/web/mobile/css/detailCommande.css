@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 févr. 2014, 16:45:01
+    Author     : INF-PORT-CR2
+*/
+body,h1,h2,#menu,.menu_block,#conteneur,#modifier_commande,table,th,td,input{
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-weight:lighter;
+    background-color:wheat;
+    margin:0;
+}
+
+h1{
+    margin:0;
+    color:white;
+    border-bottom:1px solid lightgrey;
+    background-color:#BD8D46;
+}
+
+h2{
+    background-color:peru;
+    text-align:center;
+    margin:0;
+    color:white;
+    font-weight:lighter;
+}
+
+#menu{
+    margin:auto;
+    margin-top:5%;
+    font-family:"Segoe UI", "Tahoma","Arial";
+}
+
+.menu_block{
+    margin:50px;
+    background-color:white;
+    box-shadow: 1px 1px 12px #555;
+    text-align:center;
+    width:20%;
+    display:inline-block;
+
+}
+
+#conteneur{
+    margin-top:50px;
+    background-color:wheat;
+}
+
+#modifier_commande{
+    position:relative;
+    width:100%;
+    /*    border-bottom:1px solid #BD8D46;*/
+    display:inline-block;
+}
+
+#produits{
+    width:auto;
+    height:300px;
+    display:block;
+    overflow:hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space:nowrap;
+    overflow : -moz-scrollbars-horizontal;
+}
+
+.produits_box{
+    position:relative;
+    display:inline-block;
+    margin:10px;
+    border:2px dashed peru;
+}
+
+input{
+    background-color:white;
+    border:1px solid lightgrey;
+    color:lightgrey;
+    font-weight:normal;
+    color:#BD8D46;
+    font-size:15px;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){
+
+    body{
+        font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    input{
+        -webkit-appearance: none;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 1){
+
+    .menu_block{
+        display:block;  
+    }
+}

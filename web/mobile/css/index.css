@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 déc. 2013, 11:09:05
+    Author     : INF-PORT-CR2
+*/
+body{
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+    background-color:wheat;
+    font-size:20px;
+}
+
+h2{
+    background-color:#BD8D46;
+    text-align:center;
+    margin:0;
+    color:white;
+    font-weight:lighter;
+}
+
+#connexion{
+    width:30%;
+    margin:auto;
+    margin-top:5%;
+    text-align:center;
+    background-color:white;
+    color:#BD8D46;
+    box-shadow: 1px 1px 12px #555;
+}
+
+input{
+    border:none;
+    background-color:lightgrey;
+    color:#BD8D46;
+    font-size:20px;
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){
+
+    body{
+        font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        background-color:wheat;
+        font-size:20px;
+    }
+
+    input{
+        border:none;
+        background-color:lightgrey;
+        color:#BD8D46;
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+}

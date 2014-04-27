@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 janv. 2014, 10:55:55
+    Author     : INF-PORT-CR2
+*/
+
+body,h1,h2,#categories,.categories_box,#conteneur,#produits,.produits_box, #panier,.panier_box,input{
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-weight:lighter;
+    background-color:wheat;
+    margin:0;
+}
+
+h1{
+    color:white;
+    border-bottom:1px solid lightgrey;
+    background-color:#BD8D46;
+}
+
+h2{
+    background-color:peru;
+    text-align:center;
+    margin:0;
+    color:white;
+    font-weight:lighter;
+}
+
+#categories{
+    position:absolute;
+    left:0;
+    top:0;
+    width:20%;
+    height:100%;
+    background-color:peru;
+    background-repeat:repeat-y;
+    box-shadow: 1px 1px 12px #555;
+}
+
+.categories_box{
+background-color:peru;
+border-bottom:1px dashed wheat;
+height:10%;
+}
+
+#conteneur{
+position:relative;
+width:80%;
+left:20%;
+}
+
+#produits{
+width:100%;
+height:70%;
+display:inline-block;
+border-bottom:1px dashed peru;
+}
+
+.produits_box{
+display:inline-block; 
+margin:2%;
+
+}
+
+#panier{
+    background-position:left;
+    background-repeat:no-repeat;
+    height:30%;
+}
+
+#conteneur_panier_box{
+}
+
+.panier_box{
+  width:5%;
+  display:inline-block;
+  text-align:center;
+  margin:2%;
+  border:1px dashed peru;
+}
+
+#temp{
+    position:relative;
+    top:50px;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){
+
+    body{
+        font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    }  
+    input{
+        -webkit-appearance: none;
+        border-radius:0;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 1){
+    
+   
+}

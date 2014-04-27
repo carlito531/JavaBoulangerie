@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 janv. 2014, 21:01:50
+    Author     : INF-PORT-CR2
+*/
+
+body,h1,h2,h3,#menu,.menu_block,input{
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-weight:lighter;
+    background-color:wheat;
+    margin:0;
+}
+
+h1{
+    font-family:inherit;
+    color:white;
+    border-bottom:1px solid lightgrey;
+    background-color:#BD8D46;
+    margin:0;
+}
+
+h2{
+    background-color:peru;
+    text-align:center;
+    margin:0;
+    color:white;
+    font-weight:lighter;
+}
+
+h3{
+    margin:0;
+    color:white;
+    border-bottom:1px solid lightgrey;
+    font-weight:normal;
+}
+
+#menu{
+    margin:auto;
+    margin-top:5%;
+}
+
+.menu_block{
+    margin:50px;
+    background-color:white;
+    box-shadow: 1px 1px 12px #555;
+    text-align:center;
+    width:20%;
+    display:inline-block;   
+}
+
+input{
+    background-color:white;
+    border:1px solid lightgrey;
+    color:lightgrey;
+    font-weight:normal;
+    color:#BD8D46;
+    font-size:15px;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){
+
+    body{
+        font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    h1{
+        display:none;
+    }
+
+    #menu{
+        margin:auto;
+    }
+
+    .menu_block{
+        margin:20px;  
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 1){
+    
+    .menu_block{
+        display:block;  
+    }
+}
