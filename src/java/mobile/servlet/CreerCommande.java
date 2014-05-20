@@ -48,7 +48,8 @@ public class CreerCommande extends HttpServlet {
         HttpSession session = request.getSession();
 
         // Liste la catégorie des produits
-        Collection<CategorieProduit> colcp = cpd.liste();
+        Collection<CategorieProduit> colcp = cpd.listeSansPerso();
+        
         // Liste les produits par catégories
         Collection<Produit> colp = pdao.listeParCategorie(1);
 
@@ -72,7 +73,7 @@ public class CreerCommande extends HttpServlet {
                 colp = pdao.listeParCategorie(idCategorie);
 
                 request.setAttribute("produits", colp);
-                colcp = cpd.liste();
+                colcp = cpd.listeSansPerso();
                 request.setAttribute("categoriesProduit", colcp);
 
             } else {

@@ -16,17 +16,37 @@
     </head>
     <body>
 
+
+
         <div id="left">
         </div>
         <div id="right">
         </div>
 
+        <!-- affichage image -->
+         <img src="Images/Baker.png" 
+             style = "position: absolute; 
+             top:100px; 
+             right: 100px;" />
+        
+         <!-- affichage menu -->
         <div id="center">
             <form action="ChoixFormat" method="POST">
-                <input type="submit" name="btn_mobile" value="mobile"/>
-                <input type="submit" name="btn_web" value="web"/>
+
+                <div id="center_left">
+                    <input type="submit" name="btn_mobile" value="MOBILE"/>
+                </div>
+                <div id="center_right">
+                    <input type="submit" name="btn_web" value="WEB"/> 
+                </div>  
+
             </form> 
         </div>
 
+
+        <!-- affichage image -->
+        <img src="Images/Tendre_Epis_03_detoure.png" style="position:relative;"/>
+
+       
     </body>
 </html>

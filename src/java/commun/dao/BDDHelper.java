@@ -38,7 +38,7 @@ public class BDDHelper {
         Connection cnx = null;
         try {
 
-            String url = "jdbc:jtds:sqlserver://localhost:1433/BDD_BOULANGERIE";
+            String url = "jdbc:jtds:sqlserver://192.168.20.1:1433/BDD_BOULANGERIE";
             cnx = DriverManager.getConnection(url, "sa", "azerty/123");
 
         } catch (SQLException ex) {

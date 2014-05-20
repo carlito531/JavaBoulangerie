@@ -21,6 +21,17 @@
     </head>
     <body>
 
+        <!-- bouton-image de retour vers accueil -->
+        <form action="RetourAccueil" method="POST">
+            <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
+                   style="position:absolute;
+                   bottom:5%;
+                   border:none;
+                   background-color:inherit;
+                   left:5%;
+                   z-index:1"/>    
+        </form>
+
     <center> 
         <!-- affichage des catégories -->
         <div id="categories">

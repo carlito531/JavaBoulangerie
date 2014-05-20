@@ -13,8 +13,6 @@ body,h1,h2,#menu,table,th,td,input{
 
 body{
     font-weight:lighter;
-    /*    background-image: url(../Images/motif_fond.png);
-        background-position:top left;*/
     background-color:wheat;
     margin:0;
 }
@@ -38,7 +36,6 @@ h2{
     margin:auto;
     margin-top:5%;
     font-family:"Segoe UI", "Tahoma","Arial";
-    box-shadow: 1px 1px 12px #555;
 }
 
 table{
@@ -47,9 +44,8 @@ table{
 }
 
 th{
-    font-weight:normal;
-    color:white;
-    background-color:#BD8D46;
+    font-weight:bold;
+    color:#BD8D46;  
 }
 
 td{

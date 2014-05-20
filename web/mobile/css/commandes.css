@@ -41,13 +41,11 @@ h1{
 table{
     width:100%;
     background-color:wheat;
-    box-shadow: 1px 1px 12px #555;
 }
 
 th{
-    font-weight:normal;
-    color:white;
-    background-color:#BD8D46;
+    font-weight:bold;
+    color:#BD8D46;
 }
 
 td{

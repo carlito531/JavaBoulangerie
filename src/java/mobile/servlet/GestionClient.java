@@ -66,7 +66,7 @@ public class GestionClient extends HttpServlet {
                 } else {
                 }
 
-                c = new Client(login, adresse, nom, prenom, adresse, cp, ville, mail, estCuisi, estBoul);
+                c = new Client(login, mdp, nom, prenom, adresse, cp, ville, mail, estCuisi, estBoul);
                 cdao.ajoute(c);
 
                 // Sinon si on appuie sur le bouton supprimer

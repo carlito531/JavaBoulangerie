@@ -18,6 +18,16 @@
         <h1>Gestion des clients</h1>
 
     <center><img src="Images/Tendre_Epis_03_detoure.png"/></center>
+    
+    <!-- bouton-image de retour vers accueil -->
+    <form action="RetourAccueil" method="POST">
+    <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
+            style="position:absolute;
+                   top:5%;
+                   border:none;
+                   background-color:inherit;
+                   right:10px;"/>    
+    </form>
 
     </br>
 
@@ -59,7 +69,11 @@
 
     </br>
     </br>
-
+    
+    <!-- séparation -->
+    <div class="trait" />
+    </br>
+    
     <center>
         <!-- Formulaire d'ajout de client -->
         <div id="ajoutClient">
@@ -67,22 +81,55 @@
             <h2> Ajouter un client </h2>
             </br>
             <form action="GestionClient" method="POST">
+                
+                <table>
 
-                <input type="text" name="login" value="Login"> </br></br>
-                <input type="text" name="mdp" value="Mot de passe"> </br></br>
-                <input type="text" name="nom" value="Nom"> </br></br>
-                <input type="text" name="prenom" value="Prenom"> </br></br>
-                <input type="text" name="adresse" value="Adresse"> </br></br>
-                <input type="text" name="ville" value="Ville"> </br></br>
-                <input type="text" name="cp" value="Code Postal"> </br></br>
-                <input type="text" name="mail" value="Mail"> </br></br>
-                <input type="radio" name="statut" value="estCuisinier">&nbsp Cuisinier</br></br>
-                <input type="radio" name="statut" value="estBoulanger">&nbsp Boulanger</br></br>
+                    <tr>
+                        <th> Login </th>
+                        <th> <input type="text" name="login"> </th>
+                    </tr>
+                    <tr>
+                        <th> Mot de passe </th>
+                        <th> <input type="text" name="mdp"> </th>
+                    </tr>
+                    <tr>
+                        <th> Nom </th>
+                        <th> <input type="text" name="nom"> </th>
+                    </tr>
+                    <tr>
+                        <th> Prenom </th>
+                        <th> <input type="text" name="prenom"> </th>
+                    </tr>
+                    <tr>
+                        <th> Adresse </th>
+                        <th> <input type="text" name="adresse"> </th>
+                    </tr>
+                    <tr>
+                        <th> Ville </th>
+                        <th> <input type="text" name="ville"> </th>
+                    </tr>
+                    <tr>
+                        <th> Code postal </th>
+                        <th> <input type="text" name="cp"> </th>
+                    </tr>
+                    <tr>
+                        <th> Adresse mail </th>
+                        <th> <input type="text" name="mail"> </th>
+                    </tr>
+                    <tr>
+                        <th> Type status </th>
+                        <th> <input type="radio" name="statut"> Cuisinier </br>
+                        <input type="radio" name="statut"> Boulanger </th>
+                    </tr>
+                </table>
+                </br>
+                <input type="submit" value="Ajouter" name="btn_ajouter">
 
-                <input type="submit" value="Ajouter" name="btn_ajouter">  </br></br>
             </form>
         </div>
     </center>
+    
+    
 
 </body>
 </html>

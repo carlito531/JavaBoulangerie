@@ -46,6 +46,11 @@ h2{
 .categories_box{
 background-color:peru;
 border-bottom:1px dashed wheat;
+-webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+    word-wrap: break-word;
 height:10%;
 }
 

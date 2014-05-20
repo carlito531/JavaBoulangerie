@@ -28,7 +28,6 @@ import web.model.Panier;
 import web.model.ProductOfPanier;
 import model.Statut;
 import commun.model.Client;
-import net.sourceforge.jtds.jdbc.DateTime;
 
 @WebServlet(name = "ValiderCommandeServlet", urlPatterns = {"/validercommande"})
 public class ValiderCommandeServlet extends HttpServlet {

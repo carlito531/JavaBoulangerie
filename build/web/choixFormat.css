@@ -16,6 +16,8 @@ body{
     margin:0; 
     padding:0; 
     min-height:100%;
+    background-image: url('../Images/motif.png');
+    background-position:top left;
 }
 
 #left{
@@ -44,10 +46,38 @@ body{
 
 #center{
     position:relative;
-    width:30%;
+    width:20%;
     height:200px;
-    margin:auto;
+    margin:auto; 
     top:200px;
-    background-color:whitesmoke;
-    border-radius:5px;
+}
+
+#center_left{
+    position:absolute;
+    top:40%;
+    width:50%;
+    left: 0; 
+    text-align: left;
+   
+}
+
+#center_right{
+    top:40%;
+    position:absolute;
+    width:50%;
+    right:0;
+    text-align: center;
+    text-align: right;
+}
+
+[type = "submit"]{
+    position:relative;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+    opacity:0.8;
+    border:dashed 1px #BD8D46; 
+    background-color:wheat;
+    -webkit-appearance: none;
 }

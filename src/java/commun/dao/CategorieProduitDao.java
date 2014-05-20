@@ -61,6 +61,45 @@ public class CategorieProduitDao {
         bddh.close(cnx);
         return colcp;
     }
+    
+    
+    public Collection<CategorieProduit> listeSansPerso() {
+
+        Collection<CategorieProduit> colcp = new ArrayList();
+        BDDHelper bddh = new BDDHelper();
+        Connection cnx = null;
+        Statement stmt = null;
+
+        try {
+            cnx = bddh.open();
+            stmt = cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT ID_CAT, LIB_CAT FROM CATEGORIE WHERE ID_CAT != 3 AND ID_CAT != 6");
+
+            while (rs.next()) {
+
+                int id = rs.getInt("ID_CAT");
+                String libelle = rs.getString("LIB_CAT");
+
+                CategorieProduit cp = new CategorieProduit(id, libelle);
+                colcp.add(cp);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (stmt != null) {
+                    stmt.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        bddh.close(cnx);
+        return colcp;
+    }
+    
 
     public CategorieProduit findCategorieByLibelle(String lib) {
 

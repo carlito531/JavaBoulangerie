@@ -20,6 +20,16 @@
 
     <center><img src="Images/Tendre_Epis_03_detoure.png" /> </center>
 
+    <!-- bouton-image de retour vers accueil -->
+    <form action="RetourAccueil" method="POST">
+        <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
+               style="position:absolute;
+               top:5%;
+               border:none;
+               background-color:inherit;
+               right:10px;"/>    
+    </form>
+
     <div id="menu">
         <!-- Affichage des ingrédients -->
         <h2> Ingredients </h2> 
