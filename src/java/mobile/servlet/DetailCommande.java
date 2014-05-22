@@ -52,7 +52,6 @@ public class DetailCommande extends HttpServlet {
         ProduitDao pdao = new ProduitDao();
         long id = Long.parseLong(request.getParameter("id_commande"));
         String statut = request.getParameter("choixStatut");
-        RequestDispatcher rd = request.getRequestDispatcher("mobile/detailCommande.jsp");
         Commande com = null;
         Client c = null;
         Collection<LigneCommande> collc = new ArrayList();
@@ -81,6 +80,7 @@ public class DetailCommande extends HttpServlet {
                 request.setAttribute("client", c);
                 request.setAttribute("ligneCommande", collc);
 
+                RequestDispatcher rd = request.getRequestDispatcher("GestionCommande");
                 rd.forward(request, response);
 
                 // Sinon, on affiche simplement les données
@@ -99,6 +99,7 @@ public class DetailCommande extends HttpServlet {
                 request.setAttribute("client", c);
                 request.setAttribute("ligneCommande", collc);
 
+                RequestDispatcher rd = request.getRequestDispatcher("mobile/detailCommande.jsp");
                 rd.forward(request, response);
             }
         } catch (Exception ex) {

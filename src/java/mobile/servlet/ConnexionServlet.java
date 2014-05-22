@@ -47,6 +47,7 @@ public class ConnexionServlet extends HttpServlet {
 
             HttpSession session = request.getSession();
             session.setAttribute("utilisateur", p);
+            session.setMaxInactiveInterval(60);
 
             // redirection vers la page dashboard.jsp
             RequestDispatcher rd = request.getRequestDispatcher("mobile/dashboard.jsp");

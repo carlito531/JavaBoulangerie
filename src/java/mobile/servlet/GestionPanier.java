@@ -43,7 +43,6 @@ public class GestionPanier extends HttpServlet {
 
         ProduitDao pdao = new ProduitDao();
         HttpSession session = request.getSession();
-        boolean dispo = true;
 
         try {
 

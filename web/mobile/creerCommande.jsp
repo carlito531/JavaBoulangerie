@@ -99,7 +99,7 @@
                                     ${panier.totalPrixArticle}</br>
                                 </div>
                             </c:forEach>
-                            <form action="ValidationPanier" method="POST">
+                            <form action="RecapCommande" method="POST">
                                 <center>
                                     <input type="submit" value="Valider" name="btn_validation" style="width:70px;
                                            height:70px;

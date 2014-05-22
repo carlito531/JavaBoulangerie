@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21 mai 2014, 14:19:02
+    Author     : INF-PORT-CR2
+*/
+
+body{
+    font-family: "Segoe UI", Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+    background-color:wheat;
+    margin:0;
+    padding:0;
+}
+
+
+h1{
+    font-family:inherit;
+    color:white;
+    border-bottom:1px solid lightgrey;
+    background-color:#BD8D46;
+    margin:0;
+}
+
+h2{
+    text-align:center;
+    margin:0;
+    color:#BD8D46;
+    font-weight:bold;
+}
+
+.btn{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:none;
+    background-color:whitesmoke;
+    font-weight: bold;
+    font-size:18px;
+    color:#BD8D46;
+}
+
+.btn_1{
+    width:130px;
+    height:130px;
+    border-radius: 50%;
+    border:none;
+    background-color:whitesmoke;
+    font-weight: bold;
+    font-size:18px;
+    color:#BD8D46;
+}
+
+#recap{
+    position:relative;
+    margin-top: 5%;
+}
+
+table{
+    width:80%;
+    background-color:wheat;
+}
+
+th{
+    font-weight:bold;
+    color:#BD8D46;
+    
+}
+
+td{
+    text-align:center;
+    padding:5px;
+    width:20%;
+}
+
+#choixClient{
+    position:relative;
+    margin-top: 5%;
+    padding-top:20px;
+    width:100%;
+    text-align: center;
+    border-top:1px dashed #BD8D46;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){
+
+    body{
+        font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        background-color:wheat;
+        font-size:20px;
+    }
+
+    input{
+        border:none;
+        background-color:lightgrey;
+        color:#BD8D46;
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+}

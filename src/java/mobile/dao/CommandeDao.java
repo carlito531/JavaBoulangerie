@@ -67,7 +67,7 @@ public class CommandeDao {
                 String statut = rs.getString("LIB_STA");
 
                 c = cdao.trouveAvecId(idcli);
-                p = new Commande(id, dateChgtStat, dateLivraison, prix, c , statut);
+                p = new Commande(id, dateChgtStat, dateLivraison, prix, c, statut);
             }
 
             rs.close();
@@ -135,8 +135,6 @@ public class CommandeDao {
      */
     public void changeStatut(long id, String statut) {
 
-        Commande c = trouve(id);
-
         BDDHelper bddh = new BDDHelper();
         Connection cnx = bddh.open();
 
@@ -170,6 +168,7 @@ public class CommandeDao {
                     pstmtDateLivraison.setLong(2, id);
 
                     pstmtDateLivraison.executeUpdate();
+                    supprime(trouve(id));
                     break;
                 default:
                     System.out.println("Erreur");
@@ -210,7 +209,7 @@ public class CommandeDao {
         try {
 
             stmt = cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT ID_COM, CHGT_STATUT_COM, DT_LIVR_COM, PRIX_TOT_COM, CLI_ID, LIB_STA FROM COMMANDE INNER JOIN STATUT ON ID_STA = STA_ID ORDER BY DT_LIVR_COM ASC");
+            ResultSet rs = stmt.executeQuery("SELECT ID_COM, CHGT_STATUT_COM, DT_LIVR_COM, PRIX_TOT_COM, CLI_ID, LIB_STA FROM COMMANDE INNER JOIN STATUT ON ID_STA = STA_ID ORDER BY CHGT_STATUT_COM ASC");
 
             while (rs.next()) {
 
@@ -218,7 +217,7 @@ public class CommandeDao {
                 String dateChgtStat = rs.getTimestamp("CHGT_STATUT_COM").toString();
                 String dateLivraison = "";
                 if (rs.getTimestamp("DT_LIVR_COM") == null) {
-                    dateLivraison = "null";
+                    dateLivraison = "Pas encore livré";
                 } else {
                     dateLivraison = rs.getTimestamp("DT_LIVR_COM").toString();
                 }
@@ -248,7 +247,8 @@ public class CommandeDao {
 
     /**
      * Ajoute une commande dans la bdd
-     * @param c 
+     *
+     * @param c
      */
     public void ajoute(Commande c) {
 
@@ -269,8 +269,32 @@ public class CommandeDao {
 
         } catch (SQLException ex) {
             ex.printStackTrace();
+        } finally {
+            bddh.close(cnx);
         }
-        bddh.close(cnx);
+    }
+
+    /**
+     * Supprime la commande passé en paramètre
+     * @param c 
+     */
+    public void supprime(Commande c) {
+
+        BDDHelper bddh = new BDDHelper();
+        Connection cnx = bddh.open();
+        Statement stmt = null;
+
+        try {
+
+            stmt = cnx.createStatement();
+            stmt.executeQuery("DELETE FROM COMMANDE WHERE ID_COM = '" + c.getId() + "'");
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            bddh.close(cnx);
+        }
+
     }
 
 }

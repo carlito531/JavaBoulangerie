@@ -21,17 +21,8 @@
     <body>
         <h1>Détail commande</h1>
 
-        <!-- bouton-image de retour vers accueil -->
-        <form action="RetourAccueil" method="POST">
-            <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
-                   style="position:absolute;
-                   bottom:5%;
-                   border:none;
-                   background-color:inherit;
-                   right:10px;"/>    
-        </form>
-
         <div id="conteneur"> 
+
             <div id ="modifier_commande">
 
                 <form action="DetailCommande" method="POST">
@@ -91,7 +82,17 @@
                 &nbsp <b> Adresse mail :</b> ${client.mail} </br>
                 </br>
             </div> 
-        </div>       
-
+        </div>   
+                
+        <!-- bouton-image de retour vers accueil -->
+        <form action="RetourAccueil" method="POST">
+            <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
+                   style="position:absolute;
+                   bottom:5px;
+                   border:none;
+                   background-color:inherit;
+                   right:10px;"/>    
+        </form>
+        
     </body>
 </html>

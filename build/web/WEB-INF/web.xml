@@ -104,6 +104,10 @@
         <servlet-name>WebConnexionServlet</servlet-name>
         <servlet-class>web.servlet.WebConnexionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecapCommande</servlet-name>
+        <servlet-class>mobile.servlet.RecapCommande</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ChoixFormat</servlet-name>
         <url-pattern>/ChoixFormat</url-pattern>
@@ -207,6 +211,10 @@
     <servlet-mapping>
         <servlet-name>WebConnexionServlet</servlet-name>
         <url-pattern>/web_connexion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecapCommande</servlet-name>
+        <url-pattern>/RecapCommande</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

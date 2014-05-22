@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import commun.model.Client;
+import mobile.dao.ProduitDao;
 import mobile.model.Commande;
 import model.LigneCommande;
 import mobile.model.ProduitDuPanier;
@@ -49,6 +50,7 @@ public class ValidationPanier extends HttpServlet {
         Client cli = (Client) session.getAttribute("utilisateur");   
         LigneCommandeDao lcd = new LigneCommandeDao();
         CommandeDao cdao = new CommandeDao();
+        ProduitDao pdao = new ProduitDao();
         long idCommande = cdao.retourneDernierId() + 1;
         Commande c = null;
         Iterator<ProduitDuPanier> iter = panier.iterator();
@@ -63,12 +65,17 @@ public class ValidationPanier extends HttpServlet {
                 quantitee = quantitee + prod.getQuantiteArticle();
                 prixTotal = prixTotal + Float.parseFloat(prod.getTotalPrixArticle().replace(",", "."));
             }
-            
+        
             // Ajoute la quantitée et le prix totale dans la commande
-            c = new Commande(idCommande, "", "", "" + prixTotal, cli, "1");
+            c = new Commande(idCommande, "", null, "" + prixTotal, cli, "1");
             
             // Insert la nouvelle commande dans la bdd
             cdao.ajoute(c);
+            
+            // Mise à jour du stock
+            for (ProduitDuPanier prod : panier){
+                pdao.supprimeQuantitee(prod.getIdProduit(), prod.getQuantiteArticle());
+            }
             
             // Une nouvelle fois on parcours le panier et on ajoute une ligne de commande
             // pour chaque produit du panier avec la quantitée et le prix correspondant

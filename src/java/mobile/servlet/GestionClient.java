@@ -39,7 +39,19 @@ public class GestionClient extends HttpServlet {
 
         ClientDao cdao = new ClientDao();
         Client c = null;
-        Collection<Client> colc = cdao.liste();
+
+        // affichage des clients
+        try {
+
+            Collection<Client> colc = cdao.liste();
+            request.setAttribute("clients", colc);
+
+            RequestDispatcher rd = request.getRequestDispatcher("mobile/clients.jsp");
+            rd.forward(request, response);
+
+        } catch (ServletException e) {
+            e.printStackTrace();
+        }
 
         try {
             // Si on appuie sur le bouton ajouter on récupérère tous les 
@@ -54,20 +66,23 @@ public class GestionClient extends HttpServlet {
                 String ville = request.getParameter("ville");
                 int cp = Integer.parseInt(request.getParameter("cp"));
                 String mail = request.getParameter("mail");
-                String statut = request.getParameter("statut");
-
-                Boolean estCuisi = false;
-                Boolean estBoul = false;
-
-                if (statut.equalsIgnoreCase("estCuisinier")) {
-                    estCuisi = true;
-                } else if (statut.equalsIgnoreCase("estBoul")) {
-                    estBoul = true;
-                } else {
-                }
+                String cuisinier = request.getParameter("cuisinier");
+                String boulanger = request.getParameter("boulanger");
+                
+              boolean estCuisi = false;
+              boolean estBoul = false;
+                
+               if (cuisinier != null){
+                   estCuisi = true;
+               } else if (boulanger != null){
+                   estBoul = true;
+               }
 
                 c = new Client(login, mdp, nom, prenom, adresse, cp, ville, mail, estCuisi, estBoul);
                 cdao.ajoute(c);
+
+                RequestDispatcher rd = request.getRequestDispatcher("mobile/clients.jsp");
+                rd.forward(request, response);
 
                 // Sinon si on appuie sur le bouton supprimer
                 // on supprime l'utilisateur via son ID
@@ -75,19 +90,14 @@ public class GestionClient extends HttpServlet {
 
                 long id = Long.parseLong(request.getParameter("id_client"));
                 cdao.supprime(id);
+
+                RequestDispatcher rd = request.getRequestDispatcher("mobile/clients.jsp");
+                rd.forward(request, response);
             }
 
         } catch (NumberFormatException e) {
             e.printStackTrace();
-        } finally {
-            
-            request.setAttribute("clients", colc);
-
-            // Redirige vers la page commandes.jsp
-            RequestDispatcher rd = request.getRequestDispatcher("mobile/clients.jsp");
-            rd.forward(request, response);
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

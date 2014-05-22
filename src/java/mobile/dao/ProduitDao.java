@@ -284,9 +284,11 @@ public class ProduitDao {
                 }
             } catch (SQLException ex) {
                 ex.printStackTrace();
+            } finally {
+                bddh.close(cnx);
             }
         }
-        bddh.close(cnx);
+
         return colp;
     }
 }

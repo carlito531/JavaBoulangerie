@@ -18,62 +18,60 @@
         <h1>Gestion des clients</h1>
 
     <center><img src="Images/Tendre_Epis_03_detoure.png"/></center>
-    
+
     <!-- bouton-image de retour vers accueil -->
     <form action="RetourAccueil" method="POST">
-    <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
-            style="position:absolute;
-                   top:5%;
-                   border:none;
-                   background-color:inherit;
-                   right:10px;"/>    
+        <input type=image border=0 src="Images/home.png" Value=submit align="middle" name="btn_accueil" 
+               style="position:absolute;
+               top:5%;
+               border:none;
+               background-color:inherit;
+               right:10px;"/>    
     </form>
 
     </br>
 
-    <div id="menu">
-        <!-- Affichage des Clients -->
-        <table>     
-            <tr> 
-                <th> Réf. Client </th>
-                <th> Nom </th> 
-                <th> Prenom </th> 
-                <th> Adresse </th> 
-                <th> Code postal </th>
-                <th> Ville </th>
-                <th> Mail </th>
-                <th> </th>
+    <center>
+        <div id="menu">
+            <!-- Affichage des Clients -->
+            <table>     
+                <tr> 
+                    <th> Réf. Client </th>
+                    <th> Nom </th> 
+                    <th> Prenom </th> 
+                    <th> Adresse </th> 
+                    <th> Code postal </th>
+                    <th> Ville </th>
+                    <th> Mail </th>
+                    <th> </th>
 
-            </tr>  
+                </tr>  
 
-            <c:forEach var="client" items="${client}">   
+                <c:forEach var="client" items="${client}">   
 
-                <tr>                  
-                <form action="GestionClient" method="POST">
+                    <tr>                  
+                    <form action="GestionClient" method="POST">
 
-                    <td> REF_${client.id}<input type="hidden" name="id_client" value="${client.id}"/> </td>
-                    <td> ${client.nom} </td> 
-                    <td> ${client.prenom}  </td>
-                    <td> ${client.adresse}  </td>
-                    <td> ${client.codePostal}  </td>
-                    <td> ${client.ville}  </td>
-                    <td> ${client.mail}  </td>
-                    <td> <input type="submit" value="supprimer" name="btn_supprimer"></td>
+                        <td> REF_${client.id}<input type="hidden" name="id_client" value="${client.id}"/> </td>
+                        <td> ${client.nom} </td> 
+                        <td> ${client.prenom}  </td>
+                        <td> ${client.adresse}  </td>
+                        <td> ${client.codePostal}  </td>
+                        <td> ${client.ville}  </td>
+                        <td> ${client.mail}  </td>
+                        <td> <input type="submit" value="supprimer" name="btn_supprimer"></td>
 
-                </form>
-                </tr> 
+                    </form>
+                    </tr> 
 
-            </c:forEach>
-        </table>
-    </div>
+                </c:forEach>
+            </table>
+        </div>
+    </center>
 
     </br>
     </br>
-    
-    <!-- séparation -->
-    <div class="trait" />
-    </br>
-    
+
     <center>
         <!-- Formulaire d'ajout de client -->
         <div id="ajoutClient">
@@ -81,7 +79,7 @@
             <h2> Ajouter un client </h2>
             </br>
             <form action="GestionClient" method="POST">
-                
+
                 <table>
 
                     <tr>
@@ -118,8 +116,8 @@
                     </tr>
                     <tr>
                         <th> Type status </th>
-                        <th> <input type="radio" name="statut"> Cuisinier </br>
-                        <input type="radio" name="statut"> Boulanger </th>
+                        <th> <input type="radio" name="cuisinier"> Cuisinier </br>
+                            <input type="radio" name="boulanger"> Boulanger </th>
                     </tr>
                 </table>
                 </br>
@@ -128,8 +126,8 @@
             </form>
         </div>
     </center>
-    
-    
+
+
 
 </body>
 </html>
